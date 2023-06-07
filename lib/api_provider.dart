@@ -12,7 +12,6 @@ class Api_Provider  extends ChangeNotifier {
 
   Future<void> getAllDetails() async {
     isLoading = true;
-    notifyListeners();
     final response = await _service.getRecipe();
     _contDetails = response;
 
